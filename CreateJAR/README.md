@@ -124,6 +124,7 @@ Invoke-WebRequest -Uri https://github.com/steveloughran/winutils/blob/master/had
 I recommend you create a separated Virtual Environment on conda to setup your installations and configurations, you could find additional information on:
 
 [https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/environments.html](https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/environments.html)
+
 [https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
 
 
