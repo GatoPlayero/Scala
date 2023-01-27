@@ -5,14 +5,16 @@
 <hr>
 
 ## Table of Contents
-1. **[Configure Databricks Cluster](#Configure-Databricks-Cluster)**
+1. **[Configure Databricks Cluster](#ConfigureDatabricksCluster)**
 2. **[Install JDK](#Install-JDK)**
 3. **[Install Conda](#Install-Conda)**
 4. **[Uninstall Anaconda](#Uninstall-Anaconda)**
+5. **[Install WinUtils](#Install-WinUtils)**
+6. **[Create Virtual Environment on Conda](Create-Virtual-Environment-on-Conda)**
 
 <hr>
 
-## <font style="Color:blue;">Configure&#160;Databricks&#160;Cluster</font>
+## <font style="Color:blue;">Configure&nbsp;Databricks&#160;Cluster</font>
 
 I’ll go directly to the development without entering into the Databricks setup and configuration on Azure, you could find more information on:
 
@@ -73,7 +75,7 @@ Install on [```C:\Anaconda3\```] folder:
 
 ## <font style="Color:blue;">Uninstall Anaconda</font>
 
-To uninstall Anaconda, you can do a simple remove of the program. This will leave a few files behind, which for most users is just fine. See [**Option A**](#Option-A).
+To uninstall Anaconda, you can do a simple remove of the program. This will leave a few files behind, which for most users is just fine. See [**Option A**](#-option-a---use-simple-remove-to-uninstall-anaconda).
 
 ### • **Option A** - Use simple remove to uninstall Anaconda:
 
@@ -101,4 +103,27 @@ To uninstall Anaconda, you can do a simple remove of the program. This will leav
 
 * *Anaconda-Clean* creates a backup of all files and directories that might be removed in a folder named ```.anaconda_backup``` in your home directory. Also note that *Anaconda-Clean* leaves your data files in the *AnacondaProjects* directory untouched.
 
-* After using *Anaconda-Clean*, follow the instructions above in [**Option A**](###Option-A) to uninstall Anaconda.
+* After using *Anaconda-Clean*, follow the instructions above in [**Option A**](#-option-a---use-simple-remove-to-uninstall-anaconda) to uninstall Anaconda.
+
+## <font style="Color:blue;">Install WinUtils</font>
+
+You could install [WinUtils](https://github.com/steveloughran/winutils) using next PowerShell script (*as administrator*):
+
+```powershell
+cd \;
+mkdir “hadoop”;
+New-Item -Path "C:\hadoop\bin" -ItemType Directory -Force;
+Invoke-WebRequest -Uri https://github.com/steveloughran/winutils/blob/master/hadoop-3.0.0/bin/winutils.exe -OutFile "C:\hadoop\bin\winutils.exe";
+[Environment]::SetEnvironmentVariable("HADOOP_HOME", "C:\hadoop", "Machine");
+```
+
+![alt text](./resources/images/014.png "014")
+
+## <font style="Color:blue;">Create Virtual Environment on Conda</font>
+
+I recommend you create a separated Virtual Environment on conda to setup your installations and configurations, you could find additional information on:
+
+[https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/environments.html](https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/environments.html)
+[https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
+
+

@@ -4,4 +4,4 @@
 
 <hr>
 
-## [Create JAR with Scala](./CreateJAR/README.md)
+* ### [Create JAR with Scala & Execute on Azure Databricks](./CreateJAR/)
