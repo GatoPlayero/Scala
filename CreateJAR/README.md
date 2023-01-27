@@ -1,1 +1,1 @@
-# Azure Databricks with Scala <span style="font-size:x-small;">by Alberto Cesar <gato.playero@proton.me></span>
+# Azure Databricks with Scala <font style="font-size:xx-small">by Alberto Cesar <gato.playero@proton.me></font>
