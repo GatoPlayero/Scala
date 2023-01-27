@@ -5,13 +5,15 @@
 <hr>
 
 ## Table of Contents
-1. **[Configure Databricks Cluster](##Configure_Databricks_Cluster)**
-2. **[Install JDK](##Install_JDK)**
-3. [Third Example](#tbd)
+1. **[Configure Databricks Cluster](#Configure&nbsp;Databricks&nbsp;Cluster)**
+2. **[Install JDK](#Install_JDK)**
+3. **[Install Conda](#Install&#160;Conda)**
 
 <hr>
 
-## <font style="Color:blue;">Configure_Databricks_Cluster</font>
+&#160;1&nbsp;2&#160;
+
+## <font style="Color:blue;">Configure Databricks Cluster</font>
 
 I’ll go directly to the development without entering into the Databricks setup and configuration on Azure, you could find more information on:
 
@@ -24,49 +26,42 @@ I’ll go directly to the development without entering into the Databricks setup
 
 Download JDK from [https://www.oracle.com/java/technologies/javase-jdk8-downloads.html](https://www.oracle.com/java/technologies/javase-jdk8-downloads.html), is required to work on JDK Version 8
 
-<img src="./resources/images/001.png" width="100%" />
+<!-- <img src="./resources/images/001.png" width="100%" /> -->
+![alt text](./resources/images/001.png "001")
 
 Install JAVA on [```C:\JAVA\```] folder:
 
-<img src="./resources/images/002.png" width="70%" />
+![alt text](./resources/images/002.png "002")
 
 You should install JRE on a separated folder:
 
-<img src="./resources/images/003.png" width="50%" />
+![alt text](./resources/images/003.png "003")
 
 You should be able to review if installed correctly through command prompt using “```java -version```”:
 
-<img src="./resources/images/004.png" width="50%" />
+![alt text](./resources/images/004.png "004")
 
 Once installed, you should configure the global “```JAVA_HOME```” environment variable, you could do it on PowerShell (*as administrator*):
+
 
 ```powershell applyLineNumbers
 [Environment]::SetEnvironmentVariable("JAVA_HOME", "C:\JAVA", "Machine")
 ```
 
+![alt text](./resources/images/005.png "005")
 
-```{javascript, attr.source='.numberLines startFrom="3"'}
-// @todo Add 8+ lines of amazing javascript code
-printf();
-printf();
-printf();
-printf();
-printf();
-printf();
-printf();
-printf();
-```
+Once added, you could add path environment (```%JAVA_HOME%\bin```):
 
-```javascript showLineNumbers highlightLine=2-5,8
-// @todo Add 8+ lines of amazing javascript code
-printf();
-printf();
-printf();
-printf();
-printf();
-printf();
-printf();
-printf();
-```
+|	![alt text](./resources/images/006.png "006")	|	![alt text](./resources/images/007.png "007")	|
 
-<img src="./resources/images/005.png" width="100%" />
+|	![alt text](./resources/images/008.png "008")	|	![alt text](./resources/images/009.png "009")	|
+
+Don’t forget disable the automatic updates:
+
+![alt text](./resources/images/010.png "010")
+
+## <font style="Color:blue;">Install Conda</font>
+
+You could install anaconda distribution from [https://repo.anaconda.com/archive/Anaconda3-2022.10-Windows-x86_64.exe(https://repo.anaconda.com/archive/Anaconda3-2022.10-Windows-x86_64.exe]:
+
+![alt text](./resources/images/011.png "011")
