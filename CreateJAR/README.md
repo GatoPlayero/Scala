@@ -10,7 +10,7 @@
 3. **[Install Conda](#Install-Conda)**
 4. **[Uninstall Anaconda](#Uninstall-Anaconda)**
 5. **[Install WinUtils](#Install-WinUtils)**
-6. **[Create Virtual Environment on Conda](Create-Virtual-Environment-on-Conda)**
+6. **[Create Virtual Environment on Conda](#Create-Virtual-Environment-on-Conda)**
 
 <hr>
 
@@ -127,4 +127,23 @@ I recommend you create a separated Virtual Environment on conda to setup your in
 
 [https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
 
+
+On this example, we’ll use one called “*```GatoPlayero```*”, but you can change it using whatever you want, obviously with names without blank spaces. On Anaconda PowerShell Prompt run [```conda create --name GatoPlayero python=3.9.12```]:
+
+|	![alt text](./resources/images/015.png "015")	|
+|	-----	|
+|	![alt text](./resources/images/016.png "016")	|
+
+To check Python Version use “```python - version```” on conda.
+
+On Databricks ***Runtime 6+ Python*** you should use [```conda create --name GatoPlayero python=3.9.12```]
+
+You could do more with the Virtual Environments:
+
+|	Action	|	Command	|
+|	-----	|	-----	|
+|	•	List:	|	```conda info --envs```	|
+|	•	Remove:	|	```conda env remove --name GatoPlayero```	|
+|	•	Activate:	|	```conda activate GatoPlayero```	|
+|	•	Deactivate:	|	```conda deactivate```	|
 
