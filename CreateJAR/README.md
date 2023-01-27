@@ -5,15 +5,14 @@
 <hr>
 
 ## Table of Contents
-1. **[Configure Databricks Cluster](#Configure&nbsp;Databricks&nbsp;Cluster)**
-2. **[Install JDK](#Install_JDK)**
-3. **[Install Conda](#Install&#160;Conda)**
+1. **[Configure Databricks Cluster](#Configure-Databricks-Cluster)**
+2. **[Install JDK](#Install-JDK)**
+3. **[Install Conda](#Install-Conda)**
+4. **[Uninstall Anaconda](#Uninstall-Anaconda)**
 
 <hr>
 
-&#160;1&nbsp;2&#160;
-
-## <font style="Color:blue;">Configure Databricks Cluster</font>
+## <font style="Color:blue;">Configure&#160;Databricks&#160;Cluster</font>
 
 I’ll go directly to the development without entering into the Databricks setup and configuration on Azure, you could find more information on:
 
@@ -22,7 +21,7 @@ I’ll go directly to the development without entering into the Databricks setup
 - https://docs.microsoft.com/en-us/azure/databricks/getting-started/try-databricks
 - https://docs.microsoft.com/en-us/azure/azure-databricks/
 
-## <font style="Color:blue;">Install_JDK</font>
+## <font style="Color:blue;">Install JDK</font>
 
 Download JDK from [https://www.oracle.com/java/technologies/javase-jdk8-downloads.html](https://www.oracle.com/java/technologies/javase-jdk8-downloads.html), is required to work on JDK Version 8
 
@@ -52,9 +51,10 @@ Once installed, you should configure the global “```JAVA_HOME```” environmen
 
 Once added, you could add path environment (```%JAVA_HOME%\bin```):
 
-|	![alt text](./resources/images/006.png "006")	|	![alt text](./resources/images/007.png "007")	|
-
+| ![alt text](./resources/images/006.png "006") |  ![alt text](./resources/images/007.png "007")  |
+|	-----	|	-----	|
 |	![alt text](./resources/images/008.png "008")	|	![alt text](./resources/images/009.png "009")	|
+
 
 Don’t forget disable the automatic updates:
 
@@ -62,6 +62,43 @@ Don’t forget disable the automatic updates:
 
 ## <font style="Color:blue;">Install Conda</font>
 
-You could install anaconda distribution from [https://repo.anaconda.com/archive/Anaconda3-2022.10-Windows-x86_64.exe(https://repo.anaconda.com/archive/Anaconda3-2022.10-Windows-x86_64.exe]:
+You could install anaconda distribution from [https://repo.anaconda.com/archive/Anaconda3-2022.10-Windows-x86_64.exe](https://repo.anaconda.com/archive/Anaconda3-2022.10-Windows-x86_64.exe):
 
 ![alt text](./resources/images/011.png "011")
+
+Install on [```C:\Anaconda3\```] folder:
+
+| ![alt text](./resources/images/012.png "012") |  ![alt text](./resources/images/013.png "013")  |
+|	-----	|	-----	|
+
+## <font style="Color:blue;">Uninstall Anaconda</font>
+
+To uninstall Anaconda, you can do a simple remove of the program. This will leave a few files behind, which for most users is just fine. See [**Option A**](#Option-A).
+
+### • **Option A** - Use simple remove to uninstall Anaconda:
+
+* Windows–In the Control Panel, choose Add or Remove Programs or Uninstall a program, and then select Python 3.*n* (*Anaconda*) or your version of Python.
+
+* Use Uninstall-Anaconda.exe in [```C:\Users\username\Anaconda3```]
+
+* [... also solutions for Mac and Linux are provided here: [https://docs.anaconda.com/anaconda/install/uninstall/](https://docs.anaconda.com/anaconda/install/uninstall/) ]
+
+### • **Option B** - Full uninstall using ```Anaconda-Clean``` and simple remove. **NOTE:** Anaconda-Clean must be run before simple remove.
+
+* Install the Anaconda-Clean package from Anaconda Prompt (*Terminal on Linux or macOS*):
+
+* ```conda install anaconda-clean```
+
+* In the same window, run one of these commands:
+
+	* Remove all Anaconda-related files and directories with a confirmation prompt before deleting each one:
+
+	* ```anaconda-clean``` 
+
+	* Or, remove all Anaconda-related files and directories without being prompted to delete each one:
+
+	* ```anaconda-clean –yes```
+
+* *Anaconda-Clean* creates a backup of all files and directories that might be removed in a folder named ```.anaconda_backup``` in your home directory. Also note that *Anaconda-Clean* leaves your data files in the *AnacondaProjects* directory untouched.
+
+* After using *Anaconda-Clean*, follow the instructions above in [**Option A**](###Option-A) to uninstall Anaconda.
