@@ -11,6 +11,8 @@
 4. **[Uninstall Anaconda](#Uninstall-Anaconda)**
 5. **[Install WinUtils](#Install-WinUtils)**
 6. **[Create Virtual Environment on Conda](#Create-Virtual-Environment-on-Conda)**
+7. **[Update pip](#Update-pip)**
+8. **[Install Databricks-Connect](#Install-Databricks-Connect)**
 
 <hr>
 
@@ -134,7 +136,7 @@ On this example, we’ll use one called “*```GatoPlayero```*”, but you can c
 |	-----	|
 |	![alt text](./resources/images/016.png "016")	|
 
-To check Python Version use “```python - version```” on conda.
+To check Python Version use “```python --version```” on conda.
 
 On Databricks ***Runtime 6+ Python*** you should use [```conda create --name GatoPlayero python=3.9.12```]
 
@@ -146,4 +148,14 @@ You could do more with the Virtual Environments:
 |	•	Remove:	|	```conda env remove --name GatoPlayero```	|
 |	•	Activate:	|	```conda activate GatoPlayero```	|
 |	•	Deactivate:	|	```conda deactivate```	|
+
+## <font style="Color:blue;">Update pip</font>
+
+Activate Virtual Environment using [```conda activate GatoPlayero```], once you’re on your virtual environment you could run [```pip uninstall pyspark```], then run [```python -m pip install --upgrade pip```] to update pip:
+
+![alt text](./resources/images/017.png "017")
+
+## <font style="Color:blue;">Install Databricks-Connect</font>
+
+Run [```pip install -U databricks-connect```] or if you’re using Python3 use [```pip3 install -U databricks-connect==7.3.*```] on conda virtual environment, consider that you should review the runtime on your cluster:
 
