@@ -13,6 +13,8 @@
 6. **[Create Virtual Environment on Conda](#Create-Virtual-Environment-on-Conda)**
 7. **[Update pip](#Update-pip)**
 8. **[Install Databricks-Connect](#Install-Databricks-Connect)**
+9. **[Configurations on Databricks Cluster](#Configurations-on-Databricks-Cluster)**
+10. **[Install databricks-cli](#Install-databricks-cli)**
 
 <hr>
 
@@ -157,6 +159,47 @@ Activate Virtual Environment using [```conda activate GatoPlayero```], once you�
 
 ## <font style="Color:blue;">Install Databricks-Connect</font>
 
-Run [```pip install -U databricks-connect```] or if you’re using Python3 use [```pip3 install -U databricks-connect==7.3.*```] on conda virtual environment, consider that you should review the runtime on your cluster:
+Run [```pip install -U databricks-connect```] or if you’re using ***Python3*** use [```pip3 install -U databricks-connect==10.4.*```] to install on conda virtual environment the same version used on your cluster, consider that you should review the runtime on your cluster:
 
+![alt text](./resources/images/018.png "018")
+
+You should configure remote port on cluster advanced configurations, add next lines (*you could change default port 15001*) on spark config for the remote cluster:
+
+```
+spark.databricks.service.port 15001
+spark.databricks.service.server.enabled true
+spark.databricks.delta.preview.enabled true
+```
+
+You could always uninstall any version installed through [```pip list```], you could list the libraries installed and uninstall them indicating a specific version:
+
+![alt text](./resources/images/019.png "019")
+
+
+You could find additional information (including troubleshooting) on: 
+
+- https://docs.microsoft.com/en-us/azure/databricks/dev-tools/databricks-connect
+- https://docs.databricks.com/dev-tools/databricks-connect.html
+- https://pypi.org/project/databricks-connect/
+
+## <font style="Color:blue;">Configurations on Databricks Cluster</font>
+
+You should create a Token on Azure Databricks cluster before configure it locally [*https://docs.microsoft.com/en-us/azure/databricks/dev-tools/api/latest/authentication*]:
+
+![alt text](./resources/images/020.png "020")
+
+With the URL of the cluster, you should extract the next information:
+
+|	URL	|	[<font style="font-family:courier, courier new, serif;font-size:16px;Color:OrangeRed;">https://westus.azuredatabricks.net/</font><font style="font-family:courier, courier new, serif;font-size:16px;Color:DimGray;">?o=</font><font style="font-family:courier, courier new, serif;font-size:16px;Color:Blue;">7692xxxxxxxx</font><font style="font-family:courier, courier new, serif;font-size:16px;Color:DimGray;">#/setting/clusters/</font><font style="font-family:courier, courier new, serif;font-size:16px;Color:Green;">xxxx-xxxxxx-chxxxxx</font><font style="font-family:courier, courier new, serif;font-size:16px;Color:DimGray;">/configuration</font>](#) |
+|	:-----	|	:-----	|
+|	Organization ID	|	**<font style="font-family:courier, courier new, serif;font-size:16px;Color:Blue;">7692xxxxxxxx</font>**	|
+|	Port	|	15001	|
+|	Host URL	|	[**<font style="font-family:courier, courier new, serif;font-size:16px;Color:OrangeRed;">https://westus.azuredatabricks.net/</font>**](#)	|
+|	Cluster ID	|	**<font style="font-family:courier, courier new, serif;font-size:16px;Color:Green;">xxxx-xxxxxx-chxxxxx</font>**
+
+## <font style="Color:blue;">Install databricks-cli</font>
+
+Run [```pip install databricks-cli```] or if using ***Python3***, run [```pip3 install databricks-cli```] on conda environment (*disable firewall if required*):
+
+![alt text](./resources/images/021.png "021")
 
