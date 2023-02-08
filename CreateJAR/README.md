@@ -188,7 +188,7 @@ You should create a Token on Azure Databricks cluster before configure it locall
 
 ![alt text](./resources/images/020.png "020")
 
-With the URL of the cluster, you should extract the next information:
+With the URL of the cluster, you should be able to extract all required information for local configuration:
 
 |	URL	|	[<font style="font-family:courier, courier new, serif;font-size:16px;Color:OrangeRed;">https://westus.azuredatabricks.net/</font><font style="font-family:courier, courier new, serif;font-size:16px;Color:DimGray;">?o=</font><font style="font-family:courier, courier new, serif;font-size:16px;Color:Blue;">7692xxxxxxxx</font><font style="font-family:courier, courier new, serif;font-size:16px;Color:DimGray;">#/setting/clusters/</font><font style="font-family:courier, courier new, serif;font-size:16px;Color:Green;">xxxx-xxxxxx-chxxxxx</font><font style="font-family:courier, courier new, serif;font-size:16px;Color:DimGray;">/configuration</font>](#) |
 |	:-----	|	:-----	|
