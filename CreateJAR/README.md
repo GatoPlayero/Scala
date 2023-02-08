@@ -15,6 +15,7 @@
 8. **[Install Databricks-Connect](#Install-Databricks-Connect)**
 9. **[Configurations on Databricks Cluster](#Configurations-on-Databricks-Cluster)**
 10. **[Install databricks-cli](#Install-databricks-cli)**
+11. **[Configure databricks-connect](#Configure-databricks-connect)**
 
 <hr>
 
@@ -202,4 +203,63 @@ With the URL of the cluster, you should be able to extract all required informat
 Run [```pip install databricks-cli```] or if using ***Python3***, run [```pip3 install databricks-cli```] on conda environment (*disable firewall if required*):
 
 ![alt text](./resources/images/021.png "021")
+
+
+## <font style="Color:blue;">Configure databricks-connect</font>
+
+Run [```databricks-connect configure```] on conda environment, enter all previous configurations as requested:
+
+|	[```databricks-connect configure```]	|	Disable firewall if required:	|
+|	-----	|	-----	|
+| ![alt text](./resources/images/022.png "022") |  ![alt text](./resources/images/023.png "023")  |
+
+Output:
+
+```
+Updated configuration in C:\Users\albertoc/.databricks-connect
+* Spark jar dir: C:\Anaconda3\envs\GatoPlayero\lib\site-packages\pyspark\jars
+* Spark home: C:\Anaconda3\envs\GatoPlayero\lib\site-packages\pyspark
+* Run `pip install -U databricks-connect` to install updates
+* Run `pyspark` to launch a Python shell
+* Run `spark-shell` to launch a Scala shell
+* Run `databricks-connect test` to test connectivity
+```
+
+![alt text](./resources/images/024.svg) **<font style="Color:red;">IMPORTANT NOTE:</font>**&nbsp;You could review or renew the configurations anytime running again [```databricks-connect configure```] on conda environment as required.
+
+Run [```databricks configure --token```] to configure token and run [```databricks --version```] to review installed version:
+
+![alt text](./resources/images/025.png "025")
+
+![alt text](./resources/images/024.svg) **<font style="Color:red;">IMPORTANT NOTE:</font>**&nbsp;You could review or renew the token configurations anytime running again [```databricks configure --token```] on conda environment as required.
+
+Check the ```.databrickscfg``` file on [```C:\Users\<currentUser>\.databrickscfg```] contains a corresponding profile entry:
+
+```html
+[<profile-name>]
+host = <workspace-URL>
+token = <token>
+```
+
+```
+[DEFAULT]
+host = https://xxxxxxxxxxxxxxxxxxx.azuredatabricks.net
+token = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-2
+jobs-api-version = 2.0
+```
+
+Check the ```.databricks-connect``` file on [```C:\Users\<currentUser>\.databricks-connect```] contains a corresponding profile entry:
+
+```json
+{
+	"host": "https:// xxxxxxxxxxxxxxxxxxx.azuredatabricks.net",
+	"token": "d xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-2",
+	"cluster_id": "xxxx-xxxxxx-xxxxxxx",
+	"org_id": "xxxxxxxxxxxx",
+	"port": "15001"
+}
+```
+
+Additional information [https://docs.microsoft.com/en-us/azure/databricks/dev-tools/databricks-cli]
+
 
