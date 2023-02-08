@@ -16,6 +16,7 @@
 9. **[Configurations on Databricks Cluster](#Configurations-on-Databricks-Cluster)**
 10. **[Install databricks-cli](#Install-databricks-cli)**
 11. **[Configure databricks-connect](#Configure-databricks-connect)**
+12. **[Test databricks-connect](#Test-databricks-connect)**
 
 <hr>
 
@@ -262,4 +263,8 @@ Check the ```.databricks-connect``` file on [```C:\Users\<currentUser>\.databric
 
 Additional information [https://docs.microsoft.com/en-us/azure/databricks/dev-tools/databricks-cli]
 
+
+## <font style="Color:blue;">Test databricks-connect</font>
+
+Now you&#x2019;re ready to connect to your cluster, if the cluster is turned off for inactivity, the connection will start it automatically, run [```databricks-connect test```] on conda environment:
 
