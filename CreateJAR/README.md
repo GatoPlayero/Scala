@@ -266,5 +266,13 @@ Additional information [https://docs.microsoft.com/en-us/azure/databricks/dev-to
 
 ## <font style="Color:blue;">Test databricks-connect</font>
 
-Now you&#x2019;re ready to connect to your cluster, if the cluster is turned off for inactivity, the connection will start it automatically, run [```databricks-connect test```] on conda environment:
+Now you&#x2019;re ready to connect to your cluster, if the cluster is turned off for inactivity, the connection will start it automatically, run [```databricks-connect test```] on conda environment.
+
+If you&#x2019;re scripting is unable to find [```JAVA_HOME```], don&#x2019;t forget to add set your environment variable:
+
+```PowerShell
+[Environment]::SetEnvironmentVariable("JAVA_HOME", "C:\Program Files\Java\jdk1.8.0_361", "Machine");
+```
+
+
 
