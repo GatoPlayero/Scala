@@ -22,7 +22,7 @@
 
 ## <font style="Color:blue;">Configure&nbsp;Databricks&#160;Cluster</font>
 
-I’ll go directly to the development without entering into the Databricks setup and configuration on Azure, you could find more information on:
+I&#x2019;ll go directly to the development without entering into the Databricks setup and configuration on Azure, you could find more information on:
 
 - https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-use-databricks-spark
 - https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-quickstart-create-databricks-account
@@ -44,11 +44,11 @@ You should install JRE on a separated folder:
 
 ![alt text](./resources/images/003.png "003")
 
-You should be able to review if installed correctly through command prompt using “```java -version```”:
+You should be able to review if installed correctly through command prompt using &#x201c;```java -version```&#x201d;:
 
 ![alt text](./resources/images/004.png "004")
 
-Once installed, you should configure the global “```JAVA_HOME```” environment variable, you could do it on PowerShell (*as administrator*):
+Once installed, you should configure the global &#x201c;```JAVA_HOME```&#x201d; environment variable, you could do it on PowerShell (*as administrator*):
 
 
 ```powershell applyLineNumbers
@@ -64,7 +64,7 @@ Once added, you could add path environment (```%JAVA_HOME%\bin```):
 |	![alt text](./resources/images/008.png "008")	|	![alt text](./resources/images/009.png "009")	|
 
 
-Don’t forget disable the automatic updates:
+Don&#x2019;t forget disable the automatic updates:
 
 ![alt text](./resources/images/010.png "010")
 
@@ -85,7 +85,7 @@ To uninstall Anaconda, you can do a simple remove of the program. This will leav
 
 ### • **Option A** - Use simple remove to uninstall Anaconda:
 
-* Windows–In the Control Panel, choose Add or Remove Programs or Uninstall a program, and then select Python 3.*n* (*Anaconda*) or your version of Python.
+* Windows&#x2013;In the Control Panel, choose Add or Remove Programs or Uninstall a program, and then select Python 3.*n* (*Anaconda*) or your version of Python.
 
 * Use Uninstall-Anaconda.exe in [```C:\Users\username\Anaconda3```]
 
@@ -134,13 +134,13 @@ I recommend you create a separated Virtual Environment on conda to setup your in
 [https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
 
 
-On this example, we’ll use one called “*```GatoPlayero```*”, but you can change it using whatever you want, obviously with names without blank spaces. On Anaconda PowerShell Prompt run [```conda create --name GatoPlayero python=3.9.12```]:
+On this example, we&#x2019;ll use one called &#x201c;*```GatoPlayero```*&#x201d;, but you can change it using whatever you want, obviously with names without blank spaces. On Anaconda PowerShell Prompt run [```conda create --name GatoPlayero python=3.9.12```]:
 
 |	![alt text](./resources/images/015.png "015")	|
 |	-----	|
 |	![alt text](./resources/images/016.png "016")	|
 
-To check Python Version use “```python --version```” on conda.
+To check Python Version use &#x201c;```python --version```&#x201d; on conda.
 
 On Databricks ***Runtime 6+ Python*** you should use [```conda create --name GatoPlayero python=3.9.12```]
 
@@ -155,13 +155,13 @@ You could do more with the Virtual Environments:
 
 ## <font style="Color:blue;">Update pip</font>
 
-Activate Virtual Environment using [```conda activate GatoPlayero```], once you’re on your virtual environment you could run [```pip uninstall pyspark```], then run [```python -m pip install --upgrade pip```] to update pip:
+Activate Virtual Environment using [```conda activate GatoPlayero```], once you&#x2019;re on your virtual environment you could run [```pip uninstall pyspark```], then run [```python -m pip install --upgrade pip```] to update pip:
 
 ![alt text](./resources/images/017.png "017")
 
 ## <font style="Color:blue;">Install Databricks-Connect</font>
 
-Run [```pip install -U databricks-connect```] or if you’re using ***Python3*** use [```pip3 install -U databricks-connect==10.4.*```] to install on conda virtual environment the same version used on your cluster, consider that you should review the runtime on your cluster:
+Run [```pip install -U databricks-connect```] or if you&#x2019;re using ***Python3*** use [```pip3 install -U databricks-connect==10.4.*```] to install on conda virtual environment the same version used on your cluster, consider that you should review the runtime on your cluster:
 
 ![alt text](./resources/images/018.png "018")
 
@@ -254,7 +254,7 @@ Check the ```.databricks-connect``` file on [```C:\Users\<currentUser>\.databric
 ```json
 {
 	"host": "https:// xxxxxxxxxxxxxxxxxxx.azuredatabricks.net",
-	"token": "d xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-2",
+	"token": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-2",
 	"cluster_id": "xxxx-xxxxxx-xxxxxxx",
 	"org_id": "xxxxxxxxxxxx",
 	"port": "15001"
@@ -266,13 +266,57 @@ Additional information [https://docs.microsoft.com/en-us/azure/databricks/dev-to
 
 ## <font style="Color:blue;">Test databricks-connect</font>
 
-Now you&#x2019;re ready to connect to your cluster, if the cluster is turned off for inactivity, the connection will start it automatically, run [```databricks-connect test```] on conda environment.
+Now you&#x2019;re ready to connect to your cluster, if the cluster is turned off for inactivity, the connection will start it automatically, run [```databricks-connect test```] on conda environment:
 
-If you&#x2019;re scripting is unable to find [```JAVA_HOME```], don&#x2019;t forget to add set your environment variable:
+![alt text](./resources/images/026.png "026")
+
+You could review your local connection on the cluster:
+
+![alt text](./resources/images/027.png "027")
+
+<img src="./resources/images/030.svg" width="23px" height="1%"> **<font style="Color:blue;">NOTE:</font>**&nbsp;If you&#x2019;re scripting is unable to find [```JAVA_HOME```], don&#x2019;t forget to set your environment variable:
 
 ```PowerShell
 [Environment]::SetEnvironmentVariable("JAVA_HOME", "C:\Program Files\Java\jdk1.8.0_361", "Machine");
 ```
 
+<img src="./resources/images/030.svg" width="23px" height="1%"> **<font style="Color:blue;">NOTE:</font>**&nbsp;If you receive error:&nbsp;&#x201c;*```Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Manage App Execution Aliases.
+The system cannot find the path specified.```*&#x201d;, you could run command on conda:
 
+```PowerShell
+$env:PYSPARK_DRIVER_PYTHON=python -c "import sys; print(sys.executable)"
+```
+
+Or try opening a new conda command window and running:
+
+```PowerShell
+spark-class org.apache.spark.deploy.master.Master
+```
+
+Now you can try to run scala using [```spark-shell```] or [```spark-shell --master spark://172.27.16.128:4040```] or any provided port number from the local cluser:
+
+![alt text](./resources/images/028.png "028")
+
+Or you can try to run python using [```pyspark```]:
+
+![alt text](./resources/images/029.png "029")
+
+When using scala spark shell, you could always exit:
+
+```Scala
+:quit
+// or
+:q
+// or
+// Ctrl + d // Unix
+// Ctrl + z // Windows
+// or
+sys.exit
+```
+
+When using scala pyspark, you could always exit:
+
+```Python
+exit()
+```
 
