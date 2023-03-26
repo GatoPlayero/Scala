@@ -274,13 +274,13 @@ You could review your local connection on the cluster:
 
 ![alt text](./resources/images/027.png "027")
 
-<img src="./resources/images/030.svg" width="23px" height="1%"> **<font style="Color:blue;">NOTE:</font>**&nbsp;If you&#x2019;re scripting is unable to find [```JAVA_HOME```], don&#x2019;t forget to set your environment variable:
+<img src="./resources/images/030.svg" width="23px" height="1%"> **<font style="Color:Cyan;">NOTE:</font>**&nbsp;If you&#x2019;re scripting is unable to find [```JAVA_HOME```], don&#x2019;t forget to set your environment variable:
 
 ```PowerShell
 [Environment]::SetEnvironmentVariable("JAVA_HOME", "C:\Program Files\Java\jdk1.8.0_361", "Machine");
 ```
 
-<img src="./resources/images/030.svg" width="23px" height="1%"> **<font style="Color:blue;">NOTE:</font>**&nbsp;If you receive error:&nbsp;&#x201c;*```Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Manage App Execution Aliases.
+<img src="./resources/images/030.svg" width="23px" height="1%"> **<font style="Color:Cyan;">NOTE:</font>**&nbsp;If you receive error:&nbsp;&#x201c;*```Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Manage App Execution Aliases.
 The system cannot find the path specified.```*&#x201d;, you could run command on conda:
 
 ```PowerShell
