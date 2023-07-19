@@ -161,7 +161,7 @@ Activate Virtual Environment using [```conda activate GatoPlayero```], once you&
 
 ## <font style="Color:blue;">Install Databricks-Connect</font>
 
-Run [```pip install -U databricks-connect```] or if you&#x2019;re using ***Python3*** use [```pip3 install -U databricks-connect==10.4.*```] to install on conda virtual environment the same version used on your cluster, consider that you should review the runtime on your cluster:
+Run [```pip install -U databricks-connect```] or if you&#x2019;re using ***Python3*** use [```pip3 install -U databricks-connect==12.2.*```] to install on conda virtual environment the same version used on your cluster, consider that you should review the runtime on your cluster:
 
 ![alt text](./resources/images/018.png "018")
 
@@ -263,6 +263,16 @@ Check the ```.databricks-connect``` file on [```C:\Users\<currentUser>\.databric
 
 Additional information [https://docs.microsoft.com/en-us/azure/databricks/dev-tools/databricks-cli]
 
+You could match local runtime with remote configurations:
+
+|	Databricks-Connect Runtime Version	|	Runtime	|
+|	-----	|	-----	|
+|	•	13.2.*:	|	```13.2, Scala 2.12, Spark 3.4.0```	|
+|	•	13.1.*:	|	```13.1, Scala 2.12, Spark 3.4.0```	|
+|	•	13.0.*:	|	```13.0, Scala 2.12, Spark 3.4.0```	|
+|	•	**12.2.***:	|	```12.2 LTS, Scala 2.12, Spark 3.3.2```	|
+|	•	11.3.*:	|	```11.3 LTS, Scala 2.12, Spark 3.3.0```	|
+|	•	10.4.*:	|	```10.4 LTS, Scala 2.12, Spark 3.2.1```	|
 
 ## <font style="Color:blue;">Test databricks-connect</font>
 
