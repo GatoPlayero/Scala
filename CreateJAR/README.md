@@ -134,7 +134,7 @@ I recommend you create a separated Virtual Environment on conda to setup your in
 [https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
 
 
-On this example, we&#x2019;ll use one called &#x201c;*```GatoPlayero```*&#x201d;, but you can change it using whatever you want, obviously with names without blank spaces. On Anaconda PowerShell Prompt run [```conda create --name GatoPlayero python=3.9.12```]:
+On this example, we&#x2019;ll use one called &#x201c;*```GatoPlayero```*&#x201d;, but you can change it using whatever you want, obviously with names without blank spaces. On Anaconda PowerShell Prompt run [```conda create --name GatoPlayero python=3.10.9```]:
 
 |	![alt text](./resources/images/015.png "015")	|
 |	-----	|
@@ -142,7 +142,7 @@ On this example, we&#x2019;ll use one called &#x201c;*```GatoPlayero```*&#x201d;
 
 To check Python Version use &#x201c;```python --version```&#x201d; on conda.
 
-On Databricks ***Runtime 6+ Python*** you should use [```conda create --name GatoPlayero python=3.9.12```]
+On Databricks ***Runtime 6+ Python*** you should use [```conda create --name GatoPlayero python=3.10.9```]
 
 You could do more with the Virtual Environments:
 
