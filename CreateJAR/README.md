@@ -336,10 +336,17 @@ exit()
 
 You could download and install IDE from:
 
-- https://www.jetbrains.com/idea/download/index.html#section=windows
+- https://www.jetbrains.com/idea/download/other.html
 
 ![alt text](./resources/images/031.png "031")
 
 Once installed, install next plugins:
+
+
+
+|	![alt text](./resources/images/032.png "032")	|	![alt text](./resources/images/033.png "033")	|
+|	:-----	|	:-----	|
+|	![alt text](./resources/images/034.png "034")	|	![alt text](./resources/images/035.png "035")	|
+|	![alt text](./resources/images/036.png "036")	|		|
 
 
