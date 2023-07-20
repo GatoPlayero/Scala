@@ -17,6 +17,7 @@
 10. **[Install databricks-cli](#Install-databricks-cli)**
 11. **[Configure databricks-connect](#Configure-databricks-connect)**
 12. **[Test databricks-connect](#Test-databricks-connect)**
+13. **[Install and Configure IntelliJ IDE](#Install-and-Configure-IntelliJ-IDE)**
 
 <hr>
 
@@ -329,4 +330,16 @@ When using scala pyspark, you could always exit:
 ```Python
 exit()
 ```
+
+
+## <font style="Color:blue;">Install&nbsp;and&nbsp;Configure&nbsp;IntelliJ&nbsp;IDE</font>
+
+You could download and install IDE from:
+
+- https://www.jetbrains.com/idea/download/index.html#section=windows
+
+![alt text](./resources/images/031.png "031")
+
+Once installed, install next plugins:
+
 
