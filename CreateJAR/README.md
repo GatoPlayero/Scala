@@ -350,3 +350,14 @@ Once installed, install next plugins:
 |	![alt text](./resources/images/036.png "036")	|		|
 
 
+If ```Azure Toolkit for IntelliJ``` is NOT available on the list, you could download from:
+
+- [Azure Toolkit for IntelliJ - Plugins | JetBrains](https://plugins.jetbrains.com/plugin/8053-azure-toolkit-for-intellij/versions/)
+
+![alt text](./resources/images/037.png "037")
+
+Once downloaded, we could install directly on IntelliJ using the ZIP file:
+
+![alt text](./resources/images/038.png "038")
+
+
