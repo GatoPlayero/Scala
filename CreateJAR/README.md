@@ -17,7 +17,7 @@
 10. **[Install databricks-cli](#Install-databricks-cli)**
 11. **[Configure databricks-connect](#Configure-databricks-connect)**
 12. **[Test databricks-connect](#Test-databricks-connect)**
-13. **[Install and Configure IntelliJ IDE](#Install-and-Configure-IntelliJ-IDE)**
+13. **[Install and Configure IntelliJ IDE](#InstallandConfigureIntelliJIDE)**
 
 <hr>
 
