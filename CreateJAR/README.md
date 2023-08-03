@@ -360,4 +360,7 @@ Once downloaded, we could install directly on IntelliJ using the ZIP file:
 
 ![alt text](./resources/images/038.png "038")
 
+Now, you should be able to create a new Scala project on IntelliJ:
+
+![alt text](./resources/images/039.png "039")
 
