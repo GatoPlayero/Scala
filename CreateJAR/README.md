@@ -392,3 +392,7 @@ Optionally, you can add other maven libraries, you could get any necessary libra
 |	```com.databricks:dbutils-api_2.12:0.0.6```	|	https://mvnrepository.com/artifact/com.microsoft.azure/adal4j/1.6.7	|
 |	```com.microsoft.azure:azure-sqldb-spark:1.0.2```	|	https://mvnrepository.com/artifact/com.databricks/dbutils-api_2.12/0.0.6	|
 
+On IntelliJ *project structure*, go to *libraries* and add them from Maven repository:
+
+![alt text](./resources/images/045.png "045")
+
