@@ -360,7 +360,10 @@ Once downloaded, we could install directly on IntelliJ using the ZIP file:
 
 ![alt text](./resources/images/038.png "038")
 
-Now, you should be able to create a new Scala project on IntelliJ:
+Now, you should be able to create a new Scala project on IntelliJ, review that should be anebled *Maven* as build-dependencie's type:
 
 ![alt text](./resources/images/039.png "039")
 
+Review the JAVA version on your environment, and check that the *Scala* version match with your cluster's version:
+
+![alt text](./resources/images/040.png "040")
