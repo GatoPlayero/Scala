@@ -396,3 +396,53 @@ On IntelliJ *project structure*, go to *libraries* and add them from Maven repos
 
 ![alt text](./resources/images/045.png "045")
 
+If you receive an error for *“long COMPILATION”*, you could add a *dynamic.classpath* on your project, on your project's main folder, locate ```.idea``` folder, edit ```workspace.xml``` and add:
+
+```XML
+<property name="dynamic.classpath" value="true" />
+```
+
+Inside of:
+
+```XML
+<component name="PropertiesComponent">
+	.
+	.
+	.
+</component>
+```
+
+Example:
+
+```XML
+<component name="PropertiesComponent">
+	<![CDATA[{
+	"keyToString": {
+	"Downloaded.Files.Path.Enabled": "false",
+	"Repository.Attach.Annotations": "false",
+	"Repository.Attach.JavaDocs": "false",
+	"Repository.Attach.Sources": "false",
+	"RunOnceActivity.OpenProjectViewOnStart": "true",
+	"RunOnceActivity.ShowReadmeOnStart": "true",
+	"ignore.virus.scanning.warn.message": "true",
+	"last_opened_file_path": "C:/Anaconda3/envs/GatoPlayero/Lib/site-packages/pyspark/jars",
+	"project.structure.last.edited": "Libraries",
+	"project.structure.proportion": "0.15",
+	"project.structure.side.proportion": "0.27126437"
+	}
+	}]]>
+	<property name="dynamic.classpath" value="true" />
+</component>
+```
+
+If you don't see one, feel free to add it yourself:
+
+
+```XML
+<component name="PropertiesComponent">
+	<property name="dynamic.classpath" value="true" />
+</component>
+```
+
+
+
