@@ -367,3 +367,28 @@ Now, you should be able to create a new Scala project on IntelliJ, review that s
 Review the JAVA version on your environment, and check that the *Scala* version match with your cluster's version:
 
 ![alt text](./resources/images/040.png "040")
+
+Go To *project structure* settings [Ctrl+Alt+Shift+S] on File &larr; Project Structure:
+
+![alt text](./resources/images/041.png "041")
+
+On *project structure* settings, go to “SDKs” to add/configure your local conda environment:
+
+![alt text](./resources/images/042.png "042")
+
+Add databrick libraries, copy the *jar* local directory verifying jar-dir on your *databricks-connect* configuration, you can run [```databricks-connect get-jar-dir```] on conda environment to get the directory:
+
+![alt text](./resources/images/043.png "043")
+
+Then you'll be able to add all libraries on *project structure* on *“Libraries”*:
+
+![alt text](./resources/images/044.png "044")
+
+
+Optionally, you can add other maven libraries, you could get any necessary libraries for any transformations directly from a maven repository, you’ll need to verify *groupId*, *artifactId* and *version*, like a library to connect AzureSQL using AAD, that requires SQL sparks, in this case we'll use “```com.microsoft.azure:azure-sqldb-spark:1.0.2```” as example, available on: Maven [```https://mvnrepository.com/artifact/com.microsoft.azure/azure-sqldb-spark/1.0.2```] and documented on [```https://github.com/Azure/azure-sqldb-spark```], for this example we’ll use three libraries required to move/transform data from AzureSQL into Data-Lake Gen2:
+
+|	```com.microsoft.azure:adal4j:1.6.7```	|	https://mvnrepository.com/artifact/com.microsoft.azure/azure-sqldb-spark/1.0.2	|
+|	:----------------	|	:------	|
+|	```com.databricks:dbutils-api_2.12:0.0.6```	|	https://mvnrepository.com/artifact/com.microsoft.azure/adal4j/1.6.7	|
+|	```com.microsoft.azure:azure-sqldb-spark:1.0.2```	|	https://mvnrepository.com/artifact/com.databricks/dbutils-api_2.12/0.0.6	|
+
