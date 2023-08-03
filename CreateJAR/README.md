@@ -444,5 +444,24 @@ If you don't see one, feel free to add it yourself:
 </component>
 ```
 
+Once you add any necessary libraries, you’ll need to add them as dependencies on the project, because when you add them on *IntelliJ* they’ll be used ONLY to create the JAR file, go to the *project structure*, locate “```pom.xml```” file and in the *“dependencies”* segment, add the dependencies using the same *groupId*, *artifactId* and *version* defined previously:
 
 
+
+```XML
+<dependency>
+	<groupId>com.microsoft.azure</groupId>
+	<artifactId>adal4j</artifactId>
+	<version>1.6.7</version>
+</dependency>
+<dependency>
+	<groupId>com.databricks</groupId>
+	<artifactId>dbutils-api_2.12</artifactId>
+	<version>0.0.6</version>
+</dependency>
+<dependency>
+	<groupId>com.microsoft.azure</groupId>
+	<artifactId>azure-sqldb-spark</artifactId>
+	<version>1.0.2</version>
+</dependency>
+```
