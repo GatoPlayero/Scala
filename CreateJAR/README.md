@@ -508,11 +508,11 @@ Now you could *copy path* directly from cluster on browser:
 
 ![alt text](./resources/images/057.png "057")
 
-Go to *Workflows* ![alt text](./resources/images/Workflows-icon.png) and click on *Create Job* button ![alt text](./resources/images/Create-Job-icon.png), define JOB name (*Task Name*), Type [```JAR```], on *Main Class* define the main application, including *Package* path, on this case, [```GatoPlayero.Application```], finally, configure which cluster you want to execute, you could select an existent one or you can define to create a new one for each execution:
+Go to *Workflows* ![alt text](./resources/images/Workflows-icon.png) and click on *Create Job* button ![alt text](./resources/images/Create-job-icon.png), define JOB name (*Task Name*), Type [```JAR```], on *Main Class* define the main application, including *Package* path, on this case, [```GatoPlayero.Application```], finally, configure which cluster you want to execute, you could select an existent one or you can define to create a new one for each execution:
 
 ![alt text](./resources/images/058.png "058")
 
-on *Dependent libraries*, click on [```+ Add```] ![alt text](./resources/images/Add-icon.png) button to define JAR Location on cluster's DBFS:
+on *Dependent libraries*, click on [```+ Add```] ![alt text](./resources/images/add-icon.png) button to define JAR Location on cluster's DBFS:
 
 ![alt text](./resources/images/059.png "059")
 
