@@ -384,8 +384,83 @@ Then you'll be able to add all libraries on *project structure* on *“Libraries
 
 ![alt text](./resources/images/044.png "044")
 
+You'll need to define spark dependency on ```pom.xml``` file, you could go to *mvnrepository* [```https://mvnrepository.com/artifact/org.apache.spark/spark-core```] and be sure to use the same spark version than your cluster:
 
-Optionally, you can add other maven libraries, you could get any necessary libraries for any transformations directly from a maven repository, you’ll need to verify *groupId*, *artifactId* and *version*, like a library to connect AzureSQL using AAD, that requires SQL sparks, in this case we'll use “```com.microsoft.azure:azure-sqldb-spark:1.0.2```” as example, available on: Maven [```https://mvnrepository.com/artifact/com.microsoft.azure/azure-sqldb-spark/1.0.2```] and documented on [```https://github.com/Azure/azure-sqldb-spark```], for this example we could use three libraries required to move/transform data from AzureSQL into Data-Lake Gen2:
+![alt text](./resources/images/045.png "045")
+
+Once updated dependencies on ```pom.xml```, don’t forget load changes [```Ctrl + Shift + O```]:
+
+![alt text](./resources/images/046.png "046")
+
+All of them should appears available once finished depndencie's update:
+
+![alt text](./resources/images/047.png "047")
+
+Add a new *scala class*, in the project file structure:
+
+![alt text](./resources/images/048.png "048")
+
+Let's add the ```MANIDEST``` file for the final ```.jar``` file, the file structure should be [```.\src\main\resources\META-INF\MANIFEST.MF```], remember to set the same *main-class* than the defined on the *scala class*:
+
+```
+Manifest-Version: 1.0
+Main-Class: Application
+```
+
+![alt text](./resources/images/049.png "049")
+
+Now you're ready to code, let's try a simple routine to print a ```Hello World``` message, add next code on [```.\src\main\scala\Application.scala```] file:
+
+```Scala
+package Application
+
+def main(args: Array[String]): Unit = {
+  //
+  // review incoming parameters
+  if (args != null) {
+    if (args.length > 0) {
+      for (currentArg <- args) {
+        println("Current Argument : %s".format(currentArg))
+      }
+    }
+  }
+  // define logger level
+  val logger = org.apache.log4j.Logger.getLogger("org/apache/spark/log4j-defaults.properties")
+  logger.setLevel(Level.WARN)
+  //
+  // define local session
+  val _SparkSession = SparkSession.builder().getOrCreate()
+  //
+  // print message
+  println("Hello Gatito on Spark Version 3.3.2 !!!")
+  //
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr><hr><hr><hr><hr><hr><hr><hr>
+
+<img src="./resources/images/030.svg" width="23px" height="1%"> **<font style="Color:Cyan;">NOTE:</font>**&nbsp;Optionally, you can add other maven libraries, you could get any necessary libraries for any transformations directly from a maven repository, you’ll need to verify *groupId*, *artifactId* and *version*, like a library to connect AzureSQL using AAD, that requires SQL sparks, in this case we'll use “```com.microsoft.azure:azure-sqldb-spark:1.0.2```” as example, available on: Maven [```https://mvnrepository.com/artifact/com.microsoft.azure/azure-sqldb-spark/1.0.2```] and documented on [```https://github.com/Azure/azure-sqldb-spark```], for this example we could use three libraries required to move/transform data from AzureSQL into Data-Lake Gen2:
 
 |	```com.microsoft.azure:adal4j:1.6.7```	|	https://mvnrepository.com/artifact/com.microsoft.azure/azure-sqldb-spark/1.0.2	|
 |	:----------------	|	:------	|
@@ -394,9 +469,33 @@ Optionally, you can add other maven libraries, you could get any necessary libra
 
 On IntelliJ *project structure*, go to *libraries* and add them from Maven repository:
 
-![alt text](./resources/images/045.png "045")
+![alt text](./resources/images/998.png "998")
 
-If you receive an error for *“long COMPILATION”*, you could add a *dynamic.classpath* on your project, on your project's main folder, locate ```.idea``` folder, edit ```workspace.xml``` and add:
+Once you add any necessary libraries, you’ll need to add them as dependencies on the project, because when you add them on *IntelliJ* they’ll be used ONLY to create the JAR file, go to the *project structure*, locate “```pom.xml```” file and in the *“dependencies”* segment, add the dependencies using the same *groupId*, *artifactId* and *version* defined previously:
+
+![alt text](./resources/images/999.png "999")
+
+Format:
+
+```XML
+<dependency>
+	<groupId>com.microsoft.azure</groupId>
+	<artifactId>adal4j</artifactId>
+	<version>1.6.7</version>
+</dependency>
+<dependency>
+	<groupId>com.databricks</groupId>
+	<artifactId>dbutils-api_2.12</artifactId>
+	<version>0.0.6</version>
+</dependency>
+<dependency>
+	<groupId>com.microsoft.azure</groupId>
+	<artifactId>azure-sqldb-spark</artifactId>
+	<version>1.0.2</version>
+</dependency>
+```
+
+<img src="./resources/images/030.svg" width="23px" height="1%"> **<font style="Color:Cyan;">NOTE:</font>**&nbsp;If you receive an error for *“long COMPILATION”*, you could add a *dynamic.classpath* on your project, on your project's main folder, locate ```.idea``` folder, edit ```workspace.xml``` and add:
 
 ```XML
 <property name="dynamic.classpath" value="true" />
@@ -442,26 +541,4 @@ If you don't see one, feel free to add it yourself:
 <component name="PropertiesComponent">
 	<property name="dynamic.classpath" value="true" />
 </component>
-```
-
-Once you add any necessary libraries, you’ll need to add them as dependencies on the project, because when you add them on *IntelliJ* they’ll be used ONLY to create the JAR file, go to the *project structure*, locate “```pom.xml```” file and in the *“dependencies”* segment, add the dependencies using the same *groupId*, *artifactId* and *version* defined previously:
-
-
-
-```XML
-<dependency>
-	<groupId>com.microsoft.azure</groupId>
-	<artifactId>adal4j</artifactId>
-	<version>1.6.7</version>
-</dependency>
-<dependency>
-	<groupId>com.databricks</groupId>
-	<artifactId>dbutils-api_2.12</artifactId>
-	<version>0.0.6</version>
-</dependency>
-<dependency>
-	<groupId>com.microsoft.azure</groupId>
-	<artifactId>azure-sqldb-spark</artifactId>
-	<version>1.0.2</version>
-</dependency>
 ```
