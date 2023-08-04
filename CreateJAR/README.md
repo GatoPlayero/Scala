@@ -357,11 +357,11 @@ If ```Azure Toolkit for IntelliJ``` is NOT available on the list, you could down
 
 ![alt text](./resources/images/037.png "037")
 
-## <font style="Color:blue;">Create&nbsp;Scala&nbsp;Application&nbsp;JAR</font>
-
 Once downloaded and configured, we could install directly on IntelliJ using the ZIP file:
 
 ![alt text](./resources/images/038.png "038")
+
+## <font style="Color:blue;">Create&nbsp;Scala&nbsp;Application&nbsp;JAR</font>
 
 Now, you should be able to create a new Scala project on IntelliJ, review that should be anebled *Maven* as build-dependencie's type:
 
@@ -448,14 +448,21 @@ object Application {
 }
 ```
 
+Review *project structure* to check that you have enabled ONLY ONE *source folder*, in addition of the basic resources and exclusions:
 
+![alt text](./resources/images/050.png "050")
 
+Once you have the application ready to deploy, you’ll need to generate the JAR file, on IntelliJ, go to Project Structure [```Ctrl+Alt+Shift+S```] and review the “*Artifact*” configuration, you could “*Include in project build*” to generate the JAR when you build the application, when you deploy the JAR into the cluster, you’ll need to include any “*library dependencies*” for the project runs normally, for now, let’s try to generate a simple JAR with no additional libraries to try a “*clean*” unitary test: 
 
+![alt text](./resources/images/051.png "051")
 
+The final configuration should looks like:
 
+![alt text](./resources/images/052.png "052")
 
+Now you can *Build* the application [```Ctrl+F9```] and you’ll notice that the JAR file was created after “*compilation*”:
 
-
+![alt text](./resources/images/053.png "053")
 
 
 
