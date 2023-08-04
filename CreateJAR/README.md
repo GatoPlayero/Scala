@@ -19,6 +19,7 @@
 12. **[Test databricks-connect](#Test-databricks-connect)**
 13. **[Install and Configure IntelliJ IDE](#InstallandConfigureIntelliJIDE)**
 14. **[Create Scala Application JAR](#CreateScalaApplicationJAR)**
+14. **[Enable & Manage DBFS on WebBrowser Cluster](#Enable-&-Manage-DBFS-on-WebBrowser-Cluster)**
 
 <hr>
 
@@ -464,7 +465,9 @@ Now you can *Build* the application [```Ctrl+F9```] and you’ll notice that the
 
 ![alt text](./resources/images/053.png "053")
 
+## <font style="Color:blue;">Enable & Manage DBFS on WebBrowser Cluster</font>
 
+....
 
 
 
