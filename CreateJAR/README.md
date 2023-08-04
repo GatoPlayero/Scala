@@ -484,8 +484,51 @@ Once enabled, you should be able to [browse/navigate on DBFS](https://learn.micr
 
 ## <font style="Color:blue;">Create & Run JOB on Databricks Cluster (run scala JAR)</font>
 
-...
+Once you´re able to browse/navigate on cluster’s DBFS, I recommend you to create an specific folder to deploy/upload your JAR files, basically because that way if you have a *library dependencies*, you could be able to copy them using the same folder location, that should be separated from the standard user’s workflow, as a good practice of course, on this example, let’s create a folder named [```DeployedJARs```]:
 
+![alt text](./resources/images/054.png "054")
+
+From here, we could upload the JAR file directly from the browser, or as a good practice, let's connect from our *conda* environment, activate your *Anaconda* environment and you could run:
+
+```
+databricks fs ls dbfs:/FileStore/
+```
+
+![alt text](./resources/images/055.png "055")
+
+Once connected, you should be able to run a simple copy [```cp```] command to *copy* the created JAR file:
+
+```MDOS
+databricks fs cp "C:/Users/<<ReplaceWithYourLocalFolder>>/IntelliJ.Projects/Gatito/out/artifacts/Gatito/Gatito.jar" dbfs:/FileStore/DeployedJARs/
+```
+
+![alt text](./resources/images/056.png "056")
+
+Now you could *copy path* directly from cluster on browser:
+
+![alt text](./resources/images/057.png "057")
+
+Go to *Workflows* ![alt text](./resources/images/Workflows-icon.png) and click on *Create Job* button ![alt text](./resources/images/Create-Job-icon.png), define JOB name (*Task Name*), Type [```JAR```], on *Main Class* define the main application, including *Package* path, on this case, [```GatoPlayero.Application```], finally, configure which cluster you want to execute, you could select an existent one or you can define to create a new one for each execution:
+
+![alt text](./resources/images/058.png "058")
+
+on *Dependent libraries*, click on [```+ Add```] ![alt text](./resources/images/Add-icon.png) button to define JAR Location on cluster's DBFS:
+
+![alt text](./resources/images/059.png "059")
+
+Optionally, you could define parameters for the *JAR* execution, those ones should be received on *```main```* for the defined *application main class path*, parameters should be defined as list format like:
+
+```JSON
+["Parameter One", "Parameter 2", "3"]
+```
+
+Finally, all set should look similar to:
+
+![alt text](./resources/images/060.png "060")
+
+Then, once JOB is created, you could try a unitary test, click on ![alt text](./resources/images/Run-now-icon.png) button and check output:
+
+![alt text](./resources/images/061.png "061")
 
 
 
