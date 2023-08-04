@@ -467,7 +467,74 @@ Now you can *Build* the application [```Ctrl+F9```] and you’ll notice that the
 
 ## <font style="Color:blue;">Enable & Manage DBFS on WebBrowser Cluster</font>
 
-....
+As described on [documentation](https://learn.microsoft.com/en-us/azure/databricks/administration-guide/workspace/settings/dbfs-browser), you should enable DBMS on your browser:
+
+*As a workspace admin user, you can manage your users’ ability to browse data in the Databricks File System (DBFS) using the [visual browser interface](https://learn.microsoft.com/en-us/azure/databricks/dbfs/file-browser).*
+
+1. Go to the [admin settings](https://learn.microsoft.com/en-us/azure/databricks/administration-guide/#admin-settings) page.
+2. Click the Workspace Settings tab.
+3. In the Advanced section, click the DBFS File Browser toggle.
+4. Click Confirm.
+
+Once enabled, you should be able to [browse/navigate on DBFS](https://learn.microsoft.com/en-us/azure/databricks/dbfs/file-browser):
+
+1. Click Data Icon ![alt text](./resources/images/data-icon.png) Data in the sidebar.
+2. Click the **Browse DBFS** button at the top/right of the page.
+
+## <font style="Color:blue;">Create & Run JOB on Databricks Cluster (run scala JAR)</font>
+
+...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
