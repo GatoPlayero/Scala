@@ -18,6 +18,7 @@
 11. **[Configure databricks-connect](#Configure-databricks-connect)**
 12. **[Test databricks-connect](#Test-databricks-connect)**
 13. **[Install and Configure IntelliJ IDE](#InstallandConfigureIntelliJIDE)**
+14. **[Create Scala Application JAR](#CreateScalaApplicationJAR)**
 
 <hr>
 
@@ -356,7 +357,9 @@ If ```Azure Toolkit for IntelliJ``` is NOT available on the list, you could down
 
 ![alt text](./resources/images/037.png "037")
 
-Once downloaded, we could install directly on IntelliJ using the ZIP file:
+## <font style="Color:blue;">Create&nbsp;Scala&nbsp;Application&nbsp;JAR</font>
+
+Once downloaded and configured, we could install directly on IntelliJ using the ZIP file:
 
 ![alt text](./resources/images/038.png "038")
 
@@ -409,7 +412,7 @@ Main-Class: Application
 
 ![alt text](./resources/images/049.png "049")
 
-Now you're ready to code, let's try a simple routine to print a ```Hello World``` message, add next code on [```.\src\main\scala\Application.scala```] file:
+Now you're ready to code, let's try a simple routine to print a ```Hello World``` message, add next code on </br>[```.\src\main\scala\Application.scala```] file:
 
 ```Scala
 package GatoPlayero
@@ -542,7 +545,7 @@ Example:
 </component>
 ```
 
-If you don't see one, feel free to add it yourself:
+If you don't see one, feel free to add it by yourself:
 
 
 ```XML
