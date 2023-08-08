@@ -21,6 +21,7 @@
 14. **[Create Scala Application JAR](#CreateScalaApplicationJAR)**
 15. **[Enable & Manage DBFS on WebBrowser Cluster](#Enable--Manage-DBFS-on-WebBrowser-Cluster)**
 16. **[Create & Run JOB on Databricks Cluster (run scala JAR)](#create--run-job-on-databricks-cluster-run-scala-jar)**
+17. **[(*Optional*) Include Additional or Supplementary Packages/Libraries](#optional-include-additional-or-supplementary-packageslibraries)**
 
 <hr>
 
@@ -531,8 +532,7 @@ Then, once JOB is created, you could try a unitary test, click on ![alt text](./
 ![alt text](./resources/images/061.png "061")
 
 
-## <font style="Color:blue;">[Optional] Include Additional or Supplementary Packages/Libraries</font>
-
+## <font style="Color:blue;">(*Optional*) Include Additional or Supplementary Packages/Libraries</font>
 
 
 
