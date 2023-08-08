@@ -646,6 +646,24 @@ If the libraries are too big/large to be inserted inside the *JAR*, or you donâ€
 
 ![alt text](./resources/images/070.png "070")
 
+Copy *JAR* and all libraries directly to the cluster DBFS file system:
 
+```MDOS
+databricks fs ls dbfs:/FileStore/DeployedJARs/
+```
 
+```MDOS
+databricks fs cp "C:/Users/<<ReplaceWithYourLocalFolder>>/IntelliJ.Projects/Gatito/out/artifacts/Gatito/Gatito.jar" dbfs:/FileStore/DeployedJARs/
+```
 
+```MDOS
+databricks fs cp "C:/Users/<<ReplaceWithYourLocalFolder>>/IntelliJ.Projects/Gatito/out/artifacts/Gatito/azure-sqldb-spark-1.0.2-jar-with-dependencies.jar" dbfs:/FileStore/DeployedJARs/
+```
+
+![alt text](./resources/images/071.png "071")
+Once uploaded, you should be able to copy the final DBFS path:
+
+```JSON
+dbfs:/FileStore/DeployedJARs/azure-sqldb-spark-1.0.2-jar-with-dependencies.jar
+dbfs:/FileStore/DeployedJARs/Gatito.jar
+```
