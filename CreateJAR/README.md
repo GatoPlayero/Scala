@@ -544,11 +544,11 @@ Then, once JOB is created, you could try a unitary test, click on ![alt text](./
 
 On IntelliJ *project structure*, go to *libraries* and add them from Maven repository:
 
-![alt text](./resources/images/998.png "998")
+![alt text](./resources/images/062.png "062")
 
 Once you have added any necessary libraries, you’ll need to add them as dependencies on the project, because when you add them on *IntelliJ* they’ll be used ONLY to create the JAR file, go to the *project structure*, locate “```pom.xml```” file and in the *“dependencies”* segment, add the dependencies using the same *groupId*, *artifactId* and *version* defined previously:
 
-![alt text](./resources/images/999.png "999")
+![alt text](./resources/images/063.png "063")
 
 Format:
 
