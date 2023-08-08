@@ -590,7 +590,7 @@ Then, once JOB is created, you could try a unitary test, click on ![alt text](./
 
 
 
-<hr><hr><hr><hr><hr><hr><hr><hr>
+<hr><hr><hr><hr><hr><hr><hr><hr><hr/>
 
 <img src="./resources/images/030.svg" width="23px" height="1%"> **<font style="Color:Cyan;">NOTE:</font>**&nbsp;Optionally, you can add other maven libraries, you could get any necessary libraries for any transformations directly from a maven repository, you’ll need to verify *groupId*, *artifactId* and *version*, like a library to connect AzureSQL using AAD, that requires SQL sparks, in this case we'll use “```com.microsoft.azure:azure-sqldb-spark:1.0.2```” as example, available on: Maven [```https://mvnrepository.com/artifact/com.microsoft.azure/azure-sqldb-spark/1.0.2```] and documented on [```https://github.com/Azure/azure-sqldb-spark```], for this example we could use three libraries required to move/transform data from AzureSQL into Data-Lake Gen2:
 
