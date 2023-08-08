@@ -661,6 +661,7 @@ databricks fs cp "C:/Users/<<ReplaceWithYourLocalFolder>>/IntelliJ.Projects/Gati
 ```
 
 ![alt text](./resources/images/071.png "071")
+
 Once uploaded, you should be able to copy the final DBFS path:
 
 ```
