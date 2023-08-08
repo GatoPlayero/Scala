@@ -665,6 +665,11 @@ databricks fs cp "C:/Users/<<ReplaceWithYourLocalFolder>>/IntelliJ.Projects/Gati
 Once uploaded, you should be able to copy the final DBFS path:
 
 ```
-dbfs:/FileStore/DeployedJARs/azure-sqldb-spark-1.0.2-jar-with-dependencies.jar
 dbfs:/FileStore/DeployedJARs/Gatito.jar
 ```
+
+```
+dbfs:/FileStore/DeployedJARs/azure-sqldb-spark-1.0.2-jar-with-dependencies.jar
+```
+
+
