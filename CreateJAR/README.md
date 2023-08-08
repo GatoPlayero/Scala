@@ -535,64 +535,7 @@ Then, once JOB is created, you could try a unitary test, click on ![alt text](./
 ## <font style="Color:blue;">(*Optional*) Include Additional or Supplementary Packages/Libraries</font>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img src="./resources/images/030.svg" width="23px" height="1%"> **<font style="Color:Cyan;">NOTE:</font>**&nbsp;Optionally, you can add other maven libraries, you could get any necessary libraries for any transformations directly from a maven repository, you’ll need to verify *groupId*, *artifactId* and *version*, like a library to connect AzureSQL using AAD, that requires SQL sparks, in this case we'll use “```com.microsoft.azure:azure-sqldb-spark:1.0.2```” as example, available on: Maven [```https://mvnrepository.com/artifact/com.microsoft.azure/azure-sqldb-spark/1.0.2```] and documented on [```https://github.com/Azure/azure-sqldb-spark```], for this example we could use three libraries required to move/transform data from AzureSQL into Data-Lake Gen2:
+<img src="./resources/images/030.svg" width="23px" height="1%"> **<font style="Color:Cyan;">NOTE:</font>**&nbsp;Optionally, you can add other maven *packages/libraries*, you could get any necessary *packages/libraries* for any transformations directly from a *maven* repository, you’ll need to verify *groupId*, *artifactId* and *version*, like a library to connect AzureSQL using AAD, that requires SQL sparks, in this case, as example, we'll use “```com.microsoft.azure:azure-sqldb-spark:1.0.2```”, available on: Maven [```https://mvnrepository.com/artifact/com.microsoft.azure/azure-sqldb-spark/1.0.2```] and documented on [```https://github.com/Azure/azure-sqldb-spark```], for this example we could use three libraries required to *move/transform* data from AzureSQL into Data-Lake Gen2:
 
 |	```com.microsoft.azure:adal4j:1.6.7```	|	https://mvnrepository.com/artifact/com.microsoft.azure/azure-sqldb-spark/1.0.2	|
 |	:----------------	|	:------	|
@@ -603,7 +546,7 @@ On IntelliJ *project structure*, go to *libraries* and add them from Maven repos
 
 ![alt text](./resources/images/998.png "998")
 
-Once you add any necessary libraries, you’ll need to add them as dependencies on the project, because when you add them on *IntelliJ* they’ll be used ONLY to create the JAR file, go to the *project structure*, locate “```pom.xml```” file and in the *“dependencies”* segment, add the dependencies using the same *groupId*, *artifactId* and *version* defined previously:
+Once you have added any necessary libraries, you’ll need to add them as dependencies on the project, because when you add them on *IntelliJ* they’ll be used ONLY to create the JAR file, go to the *project structure*, locate “```pom.xml```” file and in the *“dependencies”* segment, add the dependencies using the same *groupId*, *artifactId* and *version* defined previously:
 
 ![alt text](./resources/images/999.png "999")
 
@@ -668,9 +611,10 @@ Example:
 
 If you don't see one, feel free to add it by yourself:
 
-
 ```XML
 <component name="PropertiesComponent">
 	<property name="dynamic.classpath" value="true" />
 </component>
 ```
+
+
