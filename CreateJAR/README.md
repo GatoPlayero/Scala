@@ -497,7 +497,8 @@ databricks fs ls dbfs:/FileStore/
 
 ![alt text](./resources/images/055.png "055")
 
-Once connected, you should be able to run a simple copy [```cp```] command to *copy* the created JAR file:
+
+Once connected, you should be able to run a simple copy [```cp```] command to *copy* the created JAR file [https://docs.databricks.com/data/databricks-file-system.html]:
 
 ```MDOS
 databricks fs cp "C:/Users/<<ReplaceWithYourLocalFolder>>/IntelliJ.Projects/Gatito/out/artifacts/Gatito/Gatito.jar" dbfs:/FileStore/DeployedJARs/
@@ -550,10 +551,6 @@ Once you have added any necessary libraries, you’ll need to add them as depend
 
 ![alt text](./resources/images/063.png "063")
 
-Once updated dependencies, don’t forget *Load Maven Changes* [```Ctrl + Shift + O```]:
-
-![alt text](./resources/images/064.png "064")
-
 Format:
 
 ```XML
@@ -573,6 +570,18 @@ Format:
 	<version>1.0.2</version>
 </dependency>
 ```
+
+Once updated dependencies, don’t forget *Load Maven Changes* [```Ctrl + Shift + O```]:
+
+![alt text](./resources/images/064.png "064")
+
+Wait couple of minutes for the updates:
+
+![alt text](./resources/images/065.png "065")
+
+All of them should appears available once finished update:
+
+![alt text](./resources/images/066.png "066")
 
 <img src="./resources/images/030.svg" width="23px" height="1%"> **<font style="Color:Cyan;">NOTE:</font>**&nbsp;If you receive an error for *“long COMPILATION”*, you could add a *dynamic.classpath* on your project, on your project's main folder, locate ```.idea``` folder, edit ```workspace.xml``` and add:
 
@@ -620,5 +629,23 @@ If you don't see one, feel free to add it by yourself:
 	<property name="dynamic.classpath" value="true" />
 </component>
 ```
+
+To deploy additional *packages/libraries* included/required by your project, you have two options, that depends on the size of the libraries per-se, if the library is small, and you get it from maven, you could include them as extracted on the same artifact (*JAR*), on *Project Structure*, go to *Artifact properties*, on the “*Available Elements*” (*right panel*), identify the *maven library*, right click and click on “*Extract Into Output Root*”:
+
+![alt text](./resources/images/067.png "067")
+
+Once added, you’ll notice that the packages and dependencies libraries were added as part of the “*Artifact*” (*Left Panel*), don’t forget to mark “*Include in project build*”:
+
+![alt text](./resources/images/068.png "068")
+
+This way, you’ll notice that inside the *JAR* all classes were included as “*compiled*”:
+
+![alt text](./resources/images/069.png "069")
+
+If the libraries are too big/large to be inserted inside the *JAR*, or you don’t want to include them as part of the *JAR* ”*compilation*”, you could upload them on the cluster *DBFS file system*, next to your *JAR*, in this example, let’s upload the *azure-sqldb-spark* library with dependencies, you could download the full library (*with dependencies*) on [https://central.sonatype.com/search?q=azure-sqldb-spark&smo=true]:
+
+![alt text](./resources/images/070.png "070")
+
+
 
 
