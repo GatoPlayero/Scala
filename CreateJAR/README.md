@@ -550,6 +550,10 @@ Once you have added any necessary libraries, you’ll need to add them as depend
 
 ![alt text](./resources/images/063.png "063")
 
+Once updated dependencies, don’t forget *Load Maven Changes* [```Ctrl + Shift + O```]:
+
+![alt text](./resources/images/064.png "064")
+
 Format:
 
 ```XML
