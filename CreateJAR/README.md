@@ -407,7 +407,7 @@ Add a new *scala class*, in the project file structure:
 
 ![alt text](./resources/images/048.png "048")
 
-Let's add the ```MANIDEST``` file for the final ```.jar``` file, the file structure should be [```.\src\main\resources\META-INF\MANIFEST.MF```], remember to set the same *main-class* than the defined on the *scala class*:
+Let's add the ```MANIFEST.MF``` file for the final ```.jar``` file, the file structure should be [```.\src\main\resources\META-INF\MANIFEST.MF```], remember to set the same *main-class* than the defined on the *scala class*:
 
 ```
 Manifest-Version: 1.0
