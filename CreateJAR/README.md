@@ -154,6 +154,7 @@ You could do more with the Virtual Environments:
 |	Action	|	Command	|
 |	-----	|	-----	|
 |	•	List:	|	```conda info --envs```	|
+|	•	Create:	|	```conda create --name GatoPlayero python=3.10.9```	|
 |	•	Remove:	|	```conda env remove --name GatoPlayero```	|
 |	•	Activate:	|	```conda activate GatoPlayero```	|
 |	•	Deactivate:	|	```conda deactivate```	|
@@ -410,7 +411,7 @@ Let's add the ```MANIDEST``` file for the final ```.jar``` file, the file struct
 
 ```
 Manifest-Version: 1.0
-Main-Class: Application
+Main-Class: GatoPlayero.Application
 ```
 
 ![alt text](./resources/images/049.png "049")
